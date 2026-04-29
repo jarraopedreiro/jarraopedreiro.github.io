@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Jarrão Pedreiro | Pedreiro, Hidráulica e Elétrica em Campos do Jordão</title>
+  <meta name="description" content="Jarrão Pedreiro oferece serviços de pedreiro, hidráulica, elétrica e manutenção completa de casas e prédios em Campos do Jordão. Mais de 30 anos de experiência." />
+
+  <style>
+    :root {
+      --azul: #0b4f9c;
+      --azul-escuro: #073763;
+      --vermelho: #d62828;
+      --cinza: #f4f6f8;
+      --texto: #1f2933;
+      --branco: #ffffff;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      color: var(--texto);
+      background: var(--branco);
+      line-height: 1.6;
+    }
+
+    a {
+      text-decoration: none;
+    }
+
+    .container {
+      width: min(1120px, 92%);
+      margin: auto;
+    }
+
+    header {
+      background: var(--azul-escuro);
+      color: white;
+      padding: 18px 0;
+      position: sticky;
+      top: 0;
+      z-index: 10;
+    }
+
+    .navbar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+    }
+
+    .logo {
+      font-size: 24px;
+      font-weight: 800;
+      color: white;
+      letter-spacing: .5px;
+    }
+
+    .logo span {
+      color: var(--vermelho);
+    }
+
+    .btn {
+      display: inline-block;
+      background: var(--vermelho);
+      color: white;
+      padding: 13px 22px;
+      border-radius: 8px;
+      font-weight: 700;
+      transition: .2s;
+    }
+
+    .btn:hover {
+      background: #b91c1c;
+    }
+
+    .hero {
+      padding: 70px 0;
+      background: linear-gradient(135deg, #eaf3ff, #ffffff);
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 45px;
+      align-items: center;
+    }
+
+    .hero img {
+      width: 100%;
+      border-radius: 18px;
+      box-shadow: 0 20px 40px rgba(0,0,0,.15);
+    }
+
+    .eyebrow {
+      color: var(--vermelho);
+      font-weight: 800;
+      text-transform: uppercase;
+      margin-bottom: 10px;
+      letter-spacing: .8px;
+    }
+
+    h1 {
+      font-size: clamp(34px, 5vw, 56px);
+      line-height: 1.05;
+      color: var(--azul-escuro);
+      margin-bottom: 16px;
+    }
+
+    h2 {
+      font-size: clamp(22px, 3vw, 34px);
+      color: var(--azul);
+      margin-bottom: 18px;
+    }
+
+    .hero p {
+      font-size: 18px;
+      margin-bottom: 26px;
+    }
+
+    section {
+      padding: 65px 0;
+    }
+
+    .section-title {
+      text-align: center;
+      max-width: 760px;
+      margin: 0 auto 40px;
+    }
+
+    .services {
+      background: var(--cinza);
+    }
+
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 22px;
+    }
+
+    .card {
+      background: white;
+      padding: 28px;
+      border-radius: 16px;
+      box-shadow: 0 10px 28px rgba(0,0,0,.08);
+      border-top: 5px solid var(--azul);
+    }
+
+    .icon {
+      font-size: 34px;
+      margin-bottom: 12px;
+    }
+
+    .card h3 {
+      color: var(--azul-escuro);
+      margin-bottom: 8px;
+    }
+
+    .cta-box {
+      text-align: center;
+      margin-top: 35px;
+    }
+
+    .testimonials-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 20px;
+    }
+
+    .stars {
+      color: #f5b301;
+      font-size: 20px;
+      margin-bottom: 10px;
+    }
+
+    .gallery {
+      background: var(--cinza);
+    }
+
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 16px;
+    }
+
+    .gallery-grid img {
+      width: 100%;
+      height: 240px;
+      object-fit: cover;
+      border-radius: 14px;
+      box-shadow: 0 8px 22px rgba(0,0,0,.12);
+    }
+
+    footer {
+      background: var(--azul-escuro);
+      color: white;
+      padding: 35px 0;
+      text-align: center;
+    }
+
+    footer a {
+      color: white;
+      margin: 0 10px;
+      font-weight: 700;
+    }
+
+    footer a:hover {
+      color: #ffdddd;
+    }
+
+    @media (max-width: 900px) {
+      .hero-grid,
+      .services-grid,
+      .testimonials-grid,
+      .gallery-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .navbar {
+        flex-direction: column;
+      }
+
+      .gallery-grid img {
+        height: 260px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+<header>
+  <div class="container navbar">
+    <a href="/" class="logo">Jarrão <span>Pedreiro</span></a>
+    <a class="btn" href="https://wa.me/5512982320550" target="_blank">Chamar no WhatsApp</a>
+  </div>
+</header>
+
+<main>
+
+  <section class="hero">
+    <div class="container hero-grid">
+      <div>
+        <img src="assets/img/jarrao-pedreiro-obra.jpg" alt="Jarrão Pedreiro trabalhando em obra em Campos do Jordão">
+      </div>
+
+      <div>
+        <p class="eyebrow">Pedreiro em Campos do Jordão</p>
+        <h1>Serviços completos para obras, reformas e manutenção</h1>
+        <h2>Mais de 30 anos de experiência cuidando de casas e prédios na cidade</h2>
+        <p>
+          O Jarrão Pedreiro realiza serviços de alvenaria, hidráulica, elétrica,
+          reformas, reparos e manutenção geral com seriedade, capricho e confiança.
+        </p>
+        <a class="btn" href="https://wa.me/5512982320550" target="_blank">Solicitar orçamento pelo WhatsApp</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="services">
+    <div class="container">
+      <div class="section-title">
+        <h2>Serviços oferecidos</h2>
+        <p>Atendimento em Campos do Jordão para residências, apartamentos, comércios, condomínios e prédios.</p>
+      </div>
+
+      <div class="services-grid">
+        <div class="card">
+          <div class="icon">🧱</div>
+          <h3>Serviços de Pedreiro</h3>
+          <p>Construção, reparos, assentamento, reboco, contrapiso, muros, paredes e pequenos ajustes de obra.</p>
+        </div>
+
+        <div class="card">
+          <div class="icon">🚿</div>
+          <h3>Hidráulica</h3>
+          <p>Consertos em vazamentos, troca de torneiras, registros, tubulações, caixas d’água e manutenção hidráulica.</p>
+        </div>
+
+        <div class="card">
+          <div class="icon">⚡</div>
+          <h3>Elétrica</h3>
+          <p>Instalações simples, troca de tomadas, interruptores, chuveiros, luminárias e reparos elétricos residenciais.</p>
+        </div>
+
+        <div class="card">
+          <div class="icon">🏠</div>
+          <h3>Reformas Residenciais</h3>
+          <p>Reformas de casas, cozinhas, banheiros, áreas externas, varandas e ambientes internos.</p>
+        </div>
+
+        <div class="card">
+          <div class="icon">🏢</div>
+          <h3>Manutenção de Prédios</h3>
+          <p>Serviços de manutenção preventiva e corretiva para prédios, condomínios e imóveis comerciais.</p>
+        </div>
+
+        <div class="card">
+          <div class="icon">🛠️</div>
+          <h3>Pequenos Reparos</h3>
+          <p>Correções rápidas, ajustes, acabamentos, troca de peças e serviços gerais para manter o imóvel em ordem.</p>
+        </div>
+      </div>
+
+      <div class="cta-box">
+        <a class="btn" href="https://wa.me/5512982320550" target="_blank">Falar com o Jarrão agora</a>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="container">
+      <div class="section-title">
+        <h2>Depoimentos de clientes</h2>
+        <p>Confiança construída com anos de trabalho em Campos do Jordão.</p>
+      </div>
+
+      <div class="testimonials-grid">
+        <div class="card">
+          <div class="stars">★★★★★</div>
+          <p>“Serviço muito bem feito, rápido e com acabamento caprichado. Recomendo.”</p>
+          <strong>Marcos A.</strong>
+        </div>
+
+        <div class="card">
+          <div class="stars">★★★★★</div>
+          <p>“O Jarrão resolveu um problema hidráulico antigo aqui em casa. Excelente profissional.”</p>
+          <strong>Helena C.</strong>
+        </div>
+
+        <div class="card">
+          <div class="stars">★★★★★</div>
+          <p>“Trabalho sério, preço justo e muita experiência. Já chamei mais de uma vez.”</p>
+          <strong>Roberto M.</strong>
+        </div>
+
+        <div class="card">
+          <div class="stars">★★★★★</div>
+          <p>“Fez a manutenção do prédio com atenção aos detalhes. Ficamos muito satisfeitos.”</p>
+          <strong>Condomínio Vila Inglesa</strong>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="gallery">
+    <div class="container">
+      <div class="section-title">
+        <h2>Galeria de serviços</h2>
+        <p>Alguns exemplos de obras, reformas e manutenções realizadas.</p>
+      </div>
+
+      <div class="gallery-grid">
+        <img src="assets/img/servico-1.jpg" alt="Serviço de pedreiro em Campos do Jordão">
+        <img src="assets/img/servico-2.jpg" alt="Reforma residencial">
+        <img src="assets/img/servico-3.jpg" alt="Manutenção hidráulica">
+        <img src="assets/img/servico-4.jpg" alt="Serviço elétrico residencial">
+        <img src="assets/img/servico-5.jpg" alt="Manutenção de prédio">
+        <img src="assets/img/servico-6.jpg" alt="Acabamento de obra">
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="container">
+    <p><strong>Jarrão Pedreiro</strong> — Pedreiro, hidráulica, elétrica e manutenção em Campos do Jordão</p>
+    <p>
+      <a href="/contato/">Contato</a>
+      <a href="/termos-de-uso/">Termos de Uso</a>
+      <a href="/politica-de-privacidade/">Política de Privacidade</a>
+    </p>
+  </div>
+</footer>
+
+</body>
+</html>
